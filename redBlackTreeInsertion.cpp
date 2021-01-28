@@ -1,7 +1,7 @@
 //Daphne wu
 //Red-black tree insertion
 #include <iostream>
-#include <cstring>
+#include <string>
 
 
 using namespace std;
@@ -206,7 +206,7 @@ Node* getSibling(Node* n) {
 Node* getUncle(Node* n) {
 	Node* parent = getParent(n);
 	//if no parent there is also no uncle
-	return getSibling(n);
+	return getSibling(parent);
 }
 
 //for left rotation from wikipedia
@@ -382,23 +382,3 @@ void insertCase5(Node* &n) {
 	parent->isRed = false;
 	grandParent->isRed = true;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
